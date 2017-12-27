@@ -1,0 +1,26 @@
+{
+  "name": "diffy",
+  "version": "0.0.0",
+  "description": "A tiny framework for building diff based interactive command line tools.",
+  "main": "index.js",
+  "dependencies": {
+    "ansi-diff": "^1.0.4",
+    "neat-input": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/diffy.git"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/diffy/issues"
+  },
+  "homepage": "https://github.com/mafintosh/diffy",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
