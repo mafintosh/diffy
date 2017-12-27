@@ -71,11 +71,11 @@ Property containing the width of the terminal.
 
 Property containing the height of the terminal.
 
-#### `diffy.on('resize')
+#### `diffy.on('resize')`
 
 Emitted when the terminal is resized. Triggers a render as well.
 
-#### `diffy.on('render')
+#### `diffy.on('render')`
 
 Emitted just before a render happens.
 
