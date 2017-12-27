@@ -6,6 +6,8 @@ A tiny framework for building diff based interactive command line tools.
 npm install diffy
 ```
 
+[![Build Status](https://travis-ci.org/mafintosh/diffy.svg?branch=master)](https://travis-ci.org/mafintosh/diffy)
+
 Basically React, but in the terminal powered by [ansi-diff](https://github.com/mafintosh/ansi-diff) and [neat-input](https://github.com/mafintosh/neat-input).
 
 ## Usage
