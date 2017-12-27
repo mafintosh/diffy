@@ -26,7 +26,7 @@ diffy.render(function () {
 
 // re-render every 1s
 setInterval(() => diffy.render(), 1000)
-``
+```
 
 You can also use `diffy` to query input from a user
 
