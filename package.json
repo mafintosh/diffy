@@ -1,6 +1,6 @@
 {
   "name": "diffy",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A tiny framework for building diff based interactive command line tools.",
   "main": "index.js",
   "dependencies": {
