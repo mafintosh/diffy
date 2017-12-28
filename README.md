@@ -53,9 +53,20 @@ See the examples folder for more.
 
 ## API
 
-#### `var diffy = require('diffy')()`
+#### `var diffy = require('diffy')([options])`
 
 Make a new diffy instance. Writes to stdout.
+
+Options include:
+
+``` js
+{
+  fullscreen: true // overtake the terminal like vim/less does
+}
+```
+
+Note that if you use `fullscreen: true`, the terminal will be restored
+on exit, even if your program crashes.
 
 #### `diffy.render([function])`
 
