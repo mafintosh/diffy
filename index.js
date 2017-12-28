@@ -24,11 +24,6 @@ function Diffy (opts) {
   process.on('SIGWINCH', noop)
   process.on('exit', this._destroy)
 
-  if (this.fullscreen) {
-    this.out.write(SMCUP)
-    this.out.write(CLEAR)
-  }
-
   if (opts.render) this.render(opts.render)
 }
 
@@ -49,6 +44,10 @@ Object.defineProperty(Diffy.prototype, 'width', {
 })
 
 Diffy.prototype.render = function (fn) {
+  if (!this._render && this.fullscreen) {
+    this.out.write(SMCUP)
+    this.out.write(CLEAR)
+  }
   if (fn) this._render = fn
   this.emit('render')
   this.out.write(this.differ.update(this._render()))
@@ -59,7 +58,7 @@ Diffy.prototype.destroy = function () {
   this.destroyed = true
   process.removeListener('SIGWINCH', noop)
   process.removeListener('exit', this._destroy)
-  if (this.fullscreen) this.out.write(RMCUP)
+  if (this._render && this.fullscreen) this.out.write(RMCUP)
   this.emit('destroy')
 }
 
