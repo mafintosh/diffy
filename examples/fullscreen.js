@@ -1,5 +1,5 @@
-var diffy = require('diffy')({fullscreen: true})
-var input = require('diffy/input')()
+var diffy = require('../')({fullscreen: true})
+var input = require('../input')()
 var fs = require('fs')
 
 var src = fs.readFileSync(__filename, 'utf-8')
