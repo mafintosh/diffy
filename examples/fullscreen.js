@@ -15,4 +15,3 @@ input.on('enter', function () {
   tmp = upper ? src.toUpperCase() : src
   diffy.render()
 })
-
