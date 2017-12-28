@@ -17,11 +17,13 @@ function Diffy (opts) {
 
   this.destroyed = false
   this.fullscreen = !!opts.fullscreen
-  this._destroy = this.destroy.bind(this)
-  this._isFullscreen = false
   this.out = process.stdout
   this.out.on('resize', this._onresize.bind(this))
   this.differ = differ(this._dimension())
+
+  this._destroy = this.destroy.bind(this)
+  this._isFullscreen = false
+
   process.on('SIGWINCH', noop)
   process.on('exit', this._destroy)
 
