@@ -20,14 +20,16 @@ diffy.render(render)
 
 function render () {
   if (pos < 1) pos = 1
-  if (pos >= diffy.width - 1) pos = diffy.width - 2
+  var widLen = diffy.width.toString().length
+  var wid = Math.max(diffy.width - 2 * widLen - 1 - 6, 10)
+  if (pos >= wid - 1) pos = wid - 2
   var i = 1
   var s = 'Move the cursor <left> or <right>\n['
   for (; i < pos; i++) s += ' '
   s += ch
   i++
-  for (; i < diffy.width - 1; i++) s += ' '
-  s += ']\n'
+  for (; i < wid - 1; i++) s += ' '
+  s += '] ' + (pos - 1) + '/' + (wid - 2) + '\n'
   if (ch === '>') s += 'You are moving <right>'
   else s += 'You are moving <left>'
   return s
