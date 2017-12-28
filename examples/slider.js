@@ -17,8 +17,6 @@ input.on('right', function () {
 })
 
 diffy.render(render)
-pos += 1
-diffy.render()
 
 function render () {
   if (pos < 1) pos = 1
