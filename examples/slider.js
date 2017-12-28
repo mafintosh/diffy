@@ -29,7 +29,7 @@ function render () {
   s += ch
   i++
   for (; i < wid - 1; i++) s += ' '
-  s += '] ' + (pos - 1) + '/' + (wid - 2) + '\n'
+  s += '] ' + (pos - 1) + '/' + (wid - 3) + '\n'
   if (ch === '>') s += 'You are moving <right>'
   else s += 'You are moving <left>'
   return s
