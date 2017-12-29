@@ -98,6 +98,15 @@ Get a [neat-input](https://github.com/mafintosh/neat-input) instance. Use this i
 
 Helper function that trims the indentation of a multiline string. Useful if you have a render function that returns an indented string like in the above example.
 
+## Components
+
+With diffy, components are just strings you compose together to form your application.
+A bunch of modules already exists for this pattern, providing useful features.
+
+* [watson/menu-string](https://github.com/watson/menu-string) - Generate a menu with selectable menu items as a string.
+* [watson/progress-string](https://github.com/watson/progress-string) - Generate a CLI progress bar as a string that you can then output in any way you like.
+* [mafintosh/scrollable-string](https://github.com/mafintosh/scrollable-string) - Generate a diff friendly string that is bounded by a configurable scroll box.
+
 ## Credits
 
 Thank you to [@Fouad](https://github.com/Fouad) for donating the module name.
