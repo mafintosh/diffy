@@ -4,8 +4,8 @@
   "description": "A tiny framework for building diff based interactive command line tools.",
   "main": "index.js",
   "dependencies": {
-    "ansi-diff": "^1.0.4",
-    "neat-input": "^1.4.0"
+    "ansi-diff": "^1.0.10",
+    "neat-input": "^1.5.0"
   },
   "repository": {
     "type": "git",
