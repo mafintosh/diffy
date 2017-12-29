@@ -31,6 +31,8 @@ setInterval(() => diffy.render(), 1000)
 You can also use `diffy` to query input from a user
 
 ``` js
+var diffy = require('diffy')()
+var trim = require('diffy/trim')
 var input = require('diffy/input')({style: style})
 var names = []
 
@@ -40,7 +42,7 @@ input.on('enter', (line) => names.push(line))
 diffy.render(function () {
   return trim(`
     Enter your name: ${input.line()}
-    List of names: ${names.join(' ')}
+    List of names: ${names.join(', ')}
   `)
 })
 
