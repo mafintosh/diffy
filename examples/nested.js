@@ -1,7 +1,6 @@
 var diffy = require('../')()
 var trim = require('../trim')
 
-
 diffy.render(function () {
   return trim(`
     Hello user. The time is:
