@@ -6,7 +6,7 @@ function trim (s) {
   s = indent + s.trim()
   return s.split('\n')
     .map(l => replace(indent, l))
-    .join('\n') + '\n'
+    .join('\n')
 }
 
 function replace (prefix, line) {
