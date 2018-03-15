@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/mafintosh/diffy",
   "devDependencies": {
-    "chalk": "^2.3.2",
     "standard": "^10.0.3"
   }
 }

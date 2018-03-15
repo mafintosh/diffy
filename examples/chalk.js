@@ -1,13 +1,12 @@
 var diffy = require('../')()
 var trim = require('../trim')
-var chalk = require('chalk')
 
-var text = 'this is not red'
+var text = 'lowercase'
 
 process.once('SIGINT', function () {
-  text = chalk.red('this is red')
+  text = 'UPPERCASE'
   diffy.render(render)
-  process.exit()
+  process.nextTick(process.exit)
 })
 
 diffy.render(render)
