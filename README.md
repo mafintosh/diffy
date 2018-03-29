@@ -100,10 +100,6 @@ Get a [neat-input](https://github.com/mafintosh/neat-input) instance. Use this i
 
 Helper function that trims and removes the indentation of a multiline string. Useful if you have a render function that returns an indented string like in the above example.
 
-#### `var deindent = require('diffy/deindent')`
-
-Helper function that removes the indentation of a multiline string, but does not trim. Useful if you want to remove indents but not trim the string.
-
 ## Components
 
 With diffy, components are just strings you compose together to form your application.
