@@ -1,12 +1,18 @@
+
 module.exports = trim
 
 function trim (s) {
   if (!/^\r?\n/.test(s)) return s
+  return deindent(s).trim()
+}
+
+function deindent (s) {
+  if (!/^\r?\n/.test(s)) return s
   var indent = (s.match(/\n([ ]+)/m) || [])[1] || ''
-  s = indent + s.trim()
+  s = indent + s
   return s.split('\n')
     .map(l => replace(indent, l))
-    .join('\n') + '\n'
+    .join('\n')
 }
 
 function replace (prefix, line) {

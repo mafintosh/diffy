@@ -98,7 +98,7 @@ Get a [neat-input](https://github.com/mafintosh/neat-input) instance. Use this i
 
 #### `var trim = require('diffy/trim')`
 
-Helper function that trims the indentation of a multiline string. Useful if you have a render function that returns an indented string like in the above example.
+Helper function that trims and removes the indentation of a multiline string. Useful if you have a render function that returns an indented string like in the above example.
 
 ## Components
 
