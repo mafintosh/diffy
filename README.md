@@ -100,7 +100,7 @@ Get a [neat-input](https://github.com/mafintosh/neat-input) instance. Use this i
 
 Helper function that trims and removes the indentation of a multiline string. Useful if you have a render function that returns an indented string like in the above example.
 
-#### `var trim = require('diffy/trim+newline')
+#### `var trim = require('diffy/trim+newline')`
 
 Helper function that trims but adds a newline at the end
 
