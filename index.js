@@ -18,7 +18,8 @@ function Diffy (opts) {
   this.destroyed = false
   this.fullscreen = !!opts.fullscreen
   this.out = opts.out || process.stdout
-  this.out.on('resize', this._onresize.bind(this))
+  this._onresize = this.onresize.bind(this)
+  this.out.on('resize', this._onresize)
   this.differ = differ(this._dimension())
 
   this._destroy = this.destroy.bind(this)
@@ -63,10 +64,11 @@ Diffy.prototype.destroy = function () {
   process.removeListener('SIGWINCH', noop)
   process.removeListener('exit', this._destroy)
   if (this._isFullscreen) this.out.write(RMCUP)
+  this.out.removeListener('resize', this._onresize)
   this.emit('destroy')
 }
 
-Diffy.prototype._onresize = function () {
+Diffy.prototype.onresize = function () {
   this.differ.resize(this._dimension())
   this.emit('resize')
   this.render()

@@ -70,6 +70,28 @@ test('listening to resize', t => {
   t.end()
 })
 
+test('stop listening on destroy', t => {
+  let listener
+  const out = {
+    on (event, fn) {
+      listener = fn
+    },
+    removeListener (event, fn) {
+      t.notEquals(listener, undefined)
+      t.equals(fn, listener)
+      listener = undefined
+    },
+    write: noop
+  }
+  const diffy = new Diffy({
+    out,
+    render: () => ''
+  })
+  diffy.destroy()
+  t.equals(listener, undefined)
+  t.end()
+})
+
 test('size of output is passed through', t => {
   const out = {
     on: noop,
