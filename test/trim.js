@@ -30,6 +30,17 @@ test('date example', t => {
   t.end()
 })
 
+test('date example es6', t => {
+  const date = new Date()
+  const output = trim`
+  Hello user. The time is:
+    ${date}
+  That is all for now
+`
+  t.equals(output, 'Hello user. The time is:\n  ' + date.toString() + '\nThat is all for now')
+  t.end()
+})
+
 test('various indent trimming', t => {
   const output = trim(`
   1.
