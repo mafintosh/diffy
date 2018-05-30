@@ -154,6 +154,21 @@ test('fullscreen', t => {
     Buffer.from('1b5b334a1b5b481b5b324a', 'hex'),
     Buffer.from('-')
   ])
+  output = []
+  diffy.fullscreen = false
+  diffy.render()
+  t.same(output, [
+    Buffer.from('1b5b3f313034396c', 'hex'),
+    Buffer.from('')
+  ])
+  output = []
+  diffy.fullscreen = true
+  diffy.render()
+  t.same(output, [
+    Buffer.from('1b5b3f3130343968', 'hex'),
+    Buffer.from('1b5b334a1b5b481b5b324a', 'hex'),
+    Buffer.from('')
+  ])
   diffy.destroy()
   t.end()
 })
