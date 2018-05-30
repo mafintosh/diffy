@@ -17,7 +17,7 @@ function Diffy (opts) {
 
   this.destroyed = false
   this.fullscreen = !!opts.fullscreen
-  this.out = process.stdout
+  this.out = opts.out || process.stdout
   this.out.on('resize', this._onresize.bind(this))
   this.differ = differ(this._dimension())
 

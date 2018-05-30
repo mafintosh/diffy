@@ -64,6 +64,7 @@ Options include:
 ``` js
 {
   fullscreen: true // overtake the terminal like vim/less does
+  out: process.stdout // output pipe, defaults to process.stdout
 }
 ```
 
