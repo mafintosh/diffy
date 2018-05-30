@@ -12,7 +12,9 @@
     "url": "https://github.com/mafintosh/diffy.git"
   },
   "scripts": {
-    "test": "standard"
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "standard",
+    "test:unit": "tap test/*.js"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/mafintosh/diffy",
   "devDependencies": {
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "tap": "^12.0.1"
   }
 }
