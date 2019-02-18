@@ -2,6 +2,10 @@
 module.exports = trim
 
 function trim (s) {
+  if (s && s.raw) {
+    // es6 template function support
+    s = String.raw.apply(String, arguments)
+  }
   if (!/^\r?\n/.test(s)) return s
   return deindent(s).trim()
 }
